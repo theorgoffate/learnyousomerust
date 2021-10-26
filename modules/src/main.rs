@@ -1,12 +1,12 @@
 mod bar;
 mod foo;
 
-fn sayHi() {
+fn say_hi() {
     println!("Hello, world!");
 }
 fn main() {
-    sayHi();
-    foo::sayHi();
-    bar::sayHi();
-    bar::nope::sayHi();
+    say_hi();
+    foo::say_hi();
+    bar::say_hi();
+    bar::nope::say_hi();
 }
