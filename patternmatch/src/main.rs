@@ -36,3 +36,4 @@ fn select_eye_color_two(mut current_color_two: EyeColor, select: EyeColor) {
     current_color_two = select;
     println!("I feel like {:?}", current_color_two)
 }
+
