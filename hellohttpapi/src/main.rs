@@ -1,4 +1,6 @@
 #[macro_use] extern crate rocket;
+
+use rocket::Build;
 // For reference: https://rocket.rs/v0.5-rc/guide/requests/
 
 #[get("/introduce/<name>")]
@@ -12,7 +14,7 @@ fn index() -> &'static str {
 }
 
 #[launch]
-fn rocket() -> _ {
+fn rocket() -> rocket::Rocket<Build> {
     rocket::build()
         .mount(
             "/",
