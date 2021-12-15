@@ -1,6 +1,6 @@
 use serde::Serialize;
-
-#[derive(Serialize, Queryable)]
+#[derive(PartialEq, Debug, Serialize, Queryable)]
 pub struct User {
-    pub name: &'static str
+    pub id: i32,
+    pub name: Option<String>
 }
