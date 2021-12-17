@@ -1,8 +1,14 @@
 use rocket::serde::{Deserialize, Serialize};
-#[derive(PartialEq, Debug, Serialize, Deserialize, Queryable)]
+use crate::schema::users;
 
+#[derive(PartialEq, Debug, Serialize, Deserialize, Queryable, Insertable)]
 pub struct User {
-    #[serde(skip)]
     pub id: i32,
     pub name: Option<String>,
+}
+
+#[derive(PartialEq, Debug, Serialize, Deserialize, Insertable)]
+#[table_name = "users"]
+pub struct NewUser {
+    pub name: Option<String>
 }

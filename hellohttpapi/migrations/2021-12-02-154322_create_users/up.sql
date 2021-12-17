@@ -1,4 +1,4 @@
-CREATE TABLE users (
-    id   int primary key,
-    name varchar(255)
+CREATE TABLE IF NOT EXISTS users (
+    id   INT GENERATED ALWAYS AS IDENTITY UNIQUE PRIMARY KEY,
+    name VARCHAR(255)
 );
